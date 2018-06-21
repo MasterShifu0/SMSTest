@@ -24,6 +24,7 @@ public class OTPReceiver  extends BroadcastReceiver{
         if(intent != null){
             String action = intent.getAction();
             if(action.equalsIgnoreCase(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)){
+                Log.i("shekhar", " onReceive() ");
                 try {
                     String messageBody = "";
                     for (SmsMessage smsMessage : Telephony.Sms.Intents.getMessagesFromIntent(intent)) {
