@@ -49,6 +49,7 @@ public class SignupActivity extends Activity implements View.OnClickListener{
 
     }
 
+    //To be moved to VerifyOTPFragment
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -75,6 +76,7 @@ public class SignupActivity extends Activity implements View.OnClickListener{
         }
     }
 
+    //TODO : to be moved to verifyOTPFragment
     private void sendOTPToPhone() {
         String phoneNumbr = "";
         if(mVerifyPhone.getText() != null) {

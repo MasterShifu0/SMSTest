@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ostabay.ostabay.R;
+import com.example.ostabay.ostabay.onboarding.activity.ForgetPasswordActivity;
 
 public class LoginActivity extends Activity implements View.OnClickListener{
 
@@ -45,19 +46,18 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 break;
 
             case R.id.sign_up:
-                startSignupActivity();
+                startActivity(SignupActivity.class);
                 break;
             case R.id.forgot_password:
-                //TODO
-                //launch forgot session
+                startActivity(ForgetPasswordActivity.class);
                 break;
 
         }
 
     }
 
-    private void startSignupActivity() {
-        Intent signUpIntent = new Intent(this, SignupActivity.class);
+    private void startActivity(Class className) {
+        Intent signUpIntent = new Intent(this, className);
         startActivity(signUpIntent);
     }
 
